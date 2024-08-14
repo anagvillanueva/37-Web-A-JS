@@ -103,7 +103,7 @@ if (membresia1 === "SI" && vestimenta === "SI" && edad1 >= 18) {
     console.log("¡Acceso concedido! Puedes entrar al club.");
 } else if (membresia1 === "NO" || vestimenta === "NO" || edad1 < 18) {
     console.log("Acceso denegado: No cumples con todos los requisitos.");
-    
+
     // Detalles de la negación para mayor claridad.
     if (membresia1 === "NO") {
         console.log("Razón: No tienes una membresía activa.");
@@ -154,3 +154,54 @@ if (saborFavorito === "dulce" && texturaPreferida === "humedo" && momentoDelDia 
 } else {
     console.log("¡Eres un Tamal único! No hay uno como tú.");
 }
+
+// Solicitar calificación al usuario
+let calificacion = parseFloat(prompt("Ingresa tu calificación (entre 1 y 10):"));
+
+// Verificar si la calificación está en el rango válido
+if (calificacion >= 1 && calificacion <= 10) {
+    // Evaluar la calificación y mostrar el mensaje correspondiente
+    if (calificacion < 6) {
+        console.log("Reprobado ):");
+    } else if (calificacion >= 6 && calificacion <= 8) {
+        console.log("Regular, puedes mejorar");
+    } else if (calificacion === 9) {
+        console.log("¡Bien!");
+    } else {
+        console.log("Excelente, sigue asi");
+    }
+} else {
+    console.log("La calificación debe estar entre 1 y 10");
+}
+
+// Slicitar tipo de vehículo al usuario
+var tipoVehiculo = prompt("Ingrese el tipo de vehículo (coche, moto, autobús):");
+
+// Solicitar distancia recorrida al usuario
+var distanciaRecorrida = parseFloat(prompt("Ingrese la distancia recorrida en kilómetros:"));
+
+// Solicitar litros consumidos al usuario
+var litrosConsumidos = parseFloat(prompt("Ingrese los litros consumidos:"));
+
+// Definir precios por kilómetro según el tipo de vehículo
+var precioKm;
+if (tipoVehiculo.toLowerCase() === "coche") {
+    precioKm = 0.20;
+} else if (tipoVehiculo.toLowerCase() === "moto") {
+    precioKm = 0.10;
+} else if (tipoVehiculo.toLowerCase() === "autobús") {
+    precioKm = 0.5;
+} else {
+    console.log("Tipo de vehículo inválido");
+}
+
+// Calcular costo total
+var costoTotal = precioKm * distanciaRecorrida;
+if (litrosConsumidos >= 0 && litrosConsumidos <= 100) {
+    costoTotal += 5;
+} else if (litrosConsumidos > 100) {
+    costoTotal += 10;
+}
+
+console.log("El total a pagar es: " + costoTotal + " MXN");
+
