@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body id="cuerpo">
+    <!--Seleccionar un elemento por su ID-->
+    <h1 id="titulo">Hola ¡Compañeros de DEVF!</h1>
+    <button onclick="cambiarTexto()">Cambiar texto</button>    
+    
+    <!--Seleccionar elementos por clase-->
+    <p class="texto">Hola me llamo </p>
+    <p class="texto">Ana Villanueva</p>
+    <p class="texto">¡Es mi cumpleaños!</p>
+    <button onclick="cambiarColor()">Cambiar color</button>
+
+    <!--Seleccionar por etiqueta-->
+    <ul>
+        <li>Buenos días</li>
+        <li>Buenas tardes</li>
+        <li>Buenas noches</li>
+    </ul>
+    <button onclick="ocultarItem()">Oculte el primer item</button>
+    
+    <!--Reto-->
+    <button onclick="pantallaAzul()">Color de pantalla: Azul</button>
+    <button onclick="pantallaVerde()">Color de pantalla: Verde</button>
+    <button onclick="pantallaAmarillo()">Color de pantalla: Amarillo</button>
+    
+    <!--Suma-->
+    <br>
+    <h2>Suma</h2>
+    <label for="">Numero 1</label>
+    <input  id="num1" type="number">
+
+    <label for="">Numero 2</label>
+    <input id="num2" type="number">
+
+    <br>
+    <button onclick="sumar()">Resultado</button>
+    <p id="resultado">El resultado saldra aqui 🥰</p>
+
+    <!--Enlazar documento Javascript-->
+    <script src="DOM.js"></script>
+</body>
+</html>
